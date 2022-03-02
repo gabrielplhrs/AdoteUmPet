@@ -26,10 +26,12 @@ As seguintes ferramentas foram usadas na construção do projeto:
 </ul>
 
 🚀 Como executar o projeto
-Podemos considerar este projeto como sendo divido em três partes:
-
-Back End (pasta server)
-Front End (pasta web)
+Podemos considerar este projeto como sendo divido em duas partes:
+<ol>
+  <li>Back End (pasta server)</li>
+  <li>Front End (pasta web)</li>
+  <li>Javascript</li>
+</ol>
 
 ### Pré-requisitos
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: Git, Node.js. Além disto é bom ter um editor para trabalhar com o código como VSCode
