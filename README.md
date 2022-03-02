@@ -30,7 +30,6 @@ Podemos considerar este projeto como sendo divido em duas partes:
 <ol>
   <li>Back End (pasta server)</li>
   <li>Front End (pasta web)</li>
-  <li>Javascript</li>
 </ol>
 
 ### Pré-requisitos
