@@ -22,7 +22,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <ul>
   <li>.NET 6</li>
   <li>Angular</li>
-  <li>Javascript</li>
 </ul>
 
 🚀 Como executar o projeto
