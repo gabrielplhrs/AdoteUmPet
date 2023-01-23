@@ -9,7 +9,7 @@ On the website, users will be able to:
 
 <ul>
   <li>Search by the closests pets</li>
-  <li>Check pet informations such as photos, age and height/li>
+  <li>Check pet informations such as photos, age and height</li>
   <li>Create your account</li>
   <li>Create adoptions announcements</li>
   
