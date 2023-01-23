@@ -8,9 +8,11 @@ Owners will register on the platform and provide basic data to proceed with the 
 On the website, users will be able to:
 
 <ul>
+  <li>Search by the closests pets</li>
   <li>Check pet informations such as photos, age and height/li>
-  <li>Register to see the closest animals</li>
-  <li>Contact the GetAPet team for adoption questions</li>
+  <li>Create your account</li>
+  <li>Create adoptions announcements</li>
+  
 </ul>
 
 ## 🎨 Layout
