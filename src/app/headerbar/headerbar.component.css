@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@600&display=swap');
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: #B41DC1;
+    color: white;
+}
+
+.button-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px;
+    border: none;
+    border-radius: 40px;
+    font-size: 0.6em;
+
+    transition-duration: 0.4s;
+    margin-right: 10px;
+}
+
+.button-login:hover {
+    border: 1px solid white;
+    background-color: #B41DC1;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.button-login img {
+    height: 3em;
+    padding-right: 1em;
+}
+
+.titulo-completo {
+    padding: 10px;
+    padding-bottom: 15px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 16em;
+}
+
+.titulo-header h1 {
+    margin-bottom: 0%;
+    font-size: 42px;
+}
+
+.titulo-header h4 {
+    margin-top: 0%;
+}
+
+.titulo-body h1 {
+    font-size: 72px;
+    color: #B41DC1;
+}
+
+.titulo-body h4 {
+    padding-left: 10px;
+    color: #B41DC1;
+}
+
+.div-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5em;
+}
+
+.div-form input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 28em;
+}
