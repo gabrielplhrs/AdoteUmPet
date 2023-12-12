@@ -1,0 +1,21 @@
+section {
+  display: flex;
+  flex-flow: column;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo-header {
+  text-align: center;
+}
+
+.titulo-header h1 {
+  margin-bottom: 0%;
+  font-size: 42px;
+  color: #B41DC1;
+}
+
+.titulo-header h4 {
+  margin-top: 0%;
+}
