@@ -1,0 +1,47 @@
+.sidebar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-right: 1px solid #B41DC1;
+  width: 20%;
+  height: 53.5em;
+}
+
+.profile-side-bar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contato{
+  margin: 12px;
+}
+
+.contato h1{
+  color:#B41DC1;
+}
+
+.abrigo-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.abrigo-buttons button{
+  margin: 4px;
+  color: white;
+  width: 16em;
+  height: 4em;
+  border: 1px solid;
+  border-radius: 40px;
+  background-color: #B41DC1;
+}
+
+.abrigo-buttons button:hover{
+
+  background-color: #792c80;
+  cursor: pointer;
+}
