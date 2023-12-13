@@ -1,21 +1,26 @@
 section {
   display: flex;
   flex-flow: column;
-  height: 80%;
+  height: 53.5em;
   align-items: center;
   justify-content: center;
 }
 
 .titulo-header {
-  text-align: center;
+  text-align: start;
 }
 
 .titulo-header h1 {
   margin-bottom: 0%;
-  font-size: 42px;
+  font-size: 100px;
   color: #B41DC1;
 }
 
 .titulo-header h4 {
   margin-top: 0%;
+  font-size: 14px;
+}
+
+.titulo-searchbox-section {
+  gap: 15px;
 }
