@@ -8,7 +8,7 @@ div input {
   background-size: 20px 20px; /* Adjust the size as needed */
   background-repeat: no-repeat;
   background-position: right 10px center; /* Align the icon to the right */
-  
+
   margin: 8px 0;
   padding-right: 40px; /* Adjust the padding to leave space for the icon on the right */
   padding: 12px 20px;
@@ -17,5 +17,5 @@ div input {
   box-sizing: border-box;
 
   display: inline-block;
-  width: 100%;
+  width: 36em;
 }
