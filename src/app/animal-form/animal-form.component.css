@@ -1,0 +1,107 @@
+.principal{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.div-esquerda-form-animal{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 75%;
+  margin-left: 80px;
+  margin-top: 36px;
+}
+
+.div-animal-nome{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.div-animal-nome input{
+  width: 22.5em;
+  height: 2.5em;
+}
+
+.div-imagens-animal{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.button-principal{
+  width: 40em;
+  height: 36em;
+}
+
+.div-imagens-secundarias-animal{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.div-imagens-secundarias-animal button{
+  width: 10em;
+  height: 10em;
+  margin: 4px;
+}
+
+.form-descricao{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.form-descricao input{
+  width: 45em;
+  height: 10em;
+}
+
+.div-direita-form-animal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 75%;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.div-direita-form-animal button{
+  width: 12em;
+  height: 4em;
+  border-radius: 40px;
+  border: none;
+  margin: 4px;
+  color: white;
+}
+
+.button-publicar:hover{
+  background-color: #691570;
+  cursor: pointer;
+}
+
+.button-publicar{
+  background-color: #B41DC1;
+}
+
+
+.button-cancelar{
+  background-color: #EB4848;
+}
+
+.button-cancelar:hover{
+  background-color: #a73333;
+  cursor: pointer;
+}
+
+
