@@ -44,6 +44,11 @@
   margin-left: 4px;
 }
 
+.div-imagens-secundarias-animal img{
+  width: 10em;
+  height: 10em;
+}
+
 .div-descricao p{
   width: 30em;
 }
@@ -62,10 +67,20 @@
   border-radius: 12px;
   padding: 12px;
   width: 24em;
-  height: 16em;
+  height: 18em;
+  box-shadow:  1px 1px rgb(214, 214, 214);
+}
+
+.abrigo-info-nome, .abrigo-info-contato, .abrigo-info-endereco{
+  margin-bottom: 12px;
 }
 
 .button-principal{
+  width: 40em;
+  height: 36em;
+}
+
+.button-principal img{
   width: 40em;
   height: 36em;
 }
@@ -78,4 +93,9 @@
   border: none;
   margin: 4px;
   color: white;
+}
+
+.abrigo-info button:hover{
+  background-color: #75197e;
+  cursor: pointer;
 }
