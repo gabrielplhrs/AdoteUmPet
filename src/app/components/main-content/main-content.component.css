@@ -1,0 +1,95 @@
+section{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 60px;
+  width: 90em;
+  margin-left: 20%;
+}
+
+.anuncios-abrigo{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.animal-anuncio{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 12px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+h1{
+  margin-bottom: 2em;
+  font-size: 2em;
+}
+
+.animal-anuncio img{
+  border-radius: 12px;
+  width: 10em;
+  height: 10em;
+  border: 1px solid rgb(185, 185, 185);
+}
+
+.descricao-anuncio{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 16em;
+  padding-left: 8px;
+}
+
+.botao-editar-anuncio{
+  color: white;
+  background-color: #B41DC1;
+  border: none;
+  border-radius: 12px;
+  padding: 8px;
+  width: 16em;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.botao-excluir-anuncio{
+  color: white;
+  background-color: #EB4848;
+  border: none;
+  border-radius: 12px;
+  padding: 8px;
+  width: 16em;
+}
+
+.botao-editar-anuncio:hover{
+  background-color: #681470;
+  cursor: pointer;
+}
+
+.botao-excluir-anuncio:hover{
+  background-color: #922d2d;
+  cursor: pointer;
+}
+
+.header-anuncios{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.botao-criar-anuncio{
+  color: white;
+  background-color: #B41DC1;
+  border: none;
+  border-radius: 12px;
+  height: 4em;
+  width: 16em;
+}
+
+.botao-criar-anuncio:hover{
+  background-color: #681470;
+  cursor: pointer;
+}
