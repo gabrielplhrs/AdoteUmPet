@@ -6,13 +6,13 @@ import { SearchscreenComponent } from './screens/searchscreen/searchscreen.compo
 // import { MainContentComponent } from './components/main-content/main-content.component'
 // import { SidebarComponent } from './components/sidebar/sidebar.component'
 // import { AnimalFormComponent } from './animal-form/animal-form.component';
-import { AnimalProfileComponent } from './animal-profile/animal-profile.component';
+import { AnimalProfileComponent } from './screens/animal-profile/animal-profile.component';
 import { AbrigoScreenComponent } from './screens/abrigo-screen/abrigo-screen.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderbarComponent, /* MainContentComponent, SidebarComponent, AnimalFormComponent,*/AbrigoScreenComponent, AnimalProfileComponent, SearchscreenComponent],
+  imports: [CommonModule, RouterOutlet, HeaderbarComponent, /* MainContentComponent, SidebarComponent, AnimalFormComponent,*/AbrigoScreenComponent, SearchscreenComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

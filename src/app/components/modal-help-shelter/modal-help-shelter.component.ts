@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { ModalComponent } from '../modal/modal.component';
 import { ButtonComponent } from '../button/button.component';
 
@@ -10,5 +10,20 @@ import { ButtonComponent } from '../button/button.component';
   styleUrl: './modal-help-shelter.component.css'
 })
 export class ModalHelpShelterComponent {
+  @Input('visible') visible = false;
 
+  @Input('bankName') bankName = '';
+  @Input('name') name = '';
+  @Input('cnpj') cnpj = '';
+  @Input('agency') agency = '';
+  @Input('account') account = '';
+  @Input('pix') pix = '';
+  @Input('picpay') picpay = '';
+
+  @Output() notifyParent = new EventEmitter<void>();
+
+  recieveEvent() {    
+    this.visible = !this.visible;
+    this.notifyParent.emit();
+  }
 }

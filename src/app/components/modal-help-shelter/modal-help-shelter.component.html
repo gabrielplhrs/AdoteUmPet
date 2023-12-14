@@ -1,12 +1,12 @@
-<app-modal>
+<app-modal [visible]="visible">
     <h1>Apoie o abrigo</h1>
-    <p>Banco de exemplo</p>
-    <p>AdoteUmPetVV</p>
-    <p>CNPJ: 12345678/0000-0000</p>
-    <p>Agência: 00</p>
-    <p>Conta corrente: 1234567-0</p>
-    <p>Pix: 12345678900000</p>
-    <p>Picpay: &#64;adoteumpet</p>
+    <p>{{bankName}}</p>
+    <p>{{name}}</p>
+    <p>CNPJ: {{cnpj}}</p>
+    <p>Agência: {{agency}}</p>
+    <p>Conta corrente: {{account}}</p>
+    <p>Pix: {{pix}}</p>
+    <p>Picpay: &#64;{{picpay}}</p>
 
-    <app-button [text]="'Fechar'"/>
+    <app-button [text]="'Fechar'" (clickEvent)="recieveEvent()"/>
 </app-modal>
