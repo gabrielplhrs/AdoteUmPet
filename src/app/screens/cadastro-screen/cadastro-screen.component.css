@@ -1,0 +1,99 @@
+section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cadastro-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border: 1px solid #B41DC1;
+  border-radius: 12px;
+  padding: 36px;
+  margin-top: 10em;
+}
+
+.cadastro-box-form, .login-div{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cadastro-box-form h1, .cadastro-box-form h3{
+  margin: 6px;
+}
+
+.cadastro-box-form h1{
+  font-size: 20px;
+}
+
+.botoes-div{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 18em;
+}
+
+.input {
+  border: 1px solid #B41DC1;
+  border-radius: 4px;
+  height: 2.5em;
+  padding-left: 8px;
+  margin: 6px;
+}
+
+.input-normal{
+  width: 21em;
+}
+
+.input-senha{
+  width: 10em;
+}
+
+.div-senhas p{
+  padding-left: 6px;
+  width: 24em;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.cadastro-box-imagem{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 24em;
+}
+
+.cadastro-box-imagem img{
+  margin-bottom: 12px;
+}
+
+.criar-conta-button{
+  background-color: #B41DC1;
+  width: 8em;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+
+.criar-conta-button:hover{
+  background-color: #7a2f81;
+  cursor: pointer;
+}
+
+.login-button{
+  color: #B41DC1;
+  background-color: white;
+  border: none;
+}
+
+.login-button:hover{
+  color: #7a2f81;
+  cursor: pointer;
+}

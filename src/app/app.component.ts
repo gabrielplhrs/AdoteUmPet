@@ -8,11 +8,12 @@ import { SearchscreenComponent } from './screens/searchscreen/searchscreen.compo
 // import { AnimalFormComponent } from './animal-form/animal-form.component';
 import { AnimalProfileComponent } from './screens/animal-profile/animal-profile.component';
 import { AbrigoScreenComponent } from './screens/abrigo-screen/abrigo-screen.component';
+import { CadastroScreenComponent } from './screens/cadastro-screen/cadastro-screen.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderbarComponent, /* MainContentComponent, SidebarComponent, AnimalFormComponent,*/AnimalProfileComponent,AbrigoScreenComponent, SearchscreenComponent],
+  imports: [CommonModule, RouterOutlet, HeaderbarComponent, /* MainContentComponent, SidebarComponent, AnimalFormComponent,*/CadastroScreenComponent, AnimalProfileComponent,AbrigoScreenComponent, SearchscreenComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
