@@ -9,5 +9,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './modal.component.css'
 })
 export class ModalComponent {
-  visible = true;
+  @Input('visible') visible = true;
 }
