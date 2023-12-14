@@ -12,7 +12,7 @@ import { AbrigoScreenComponent } from './screens/abrigo-screen/abrigo-screen.com
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderbarComponent, /* MainContentComponent, SidebarComponent, AnimalFormComponent,*/AbrigoScreenComponent, SearchscreenComponent],
+  imports: [CommonModule, RouterOutlet, HeaderbarComponent, /* MainContentComponent, SidebarComponent, AnimalFormComponent,*/AnimalProfileComponent,AbrigoScreenComponent, SearchscreenComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
