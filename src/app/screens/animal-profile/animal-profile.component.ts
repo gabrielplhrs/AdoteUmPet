@@ -1,4 +1,5 @@
 import { Component, OnChanges, SimpleChanges } from '@angular/core';
+import { Router } from '@angular/router';
 import { ButtonComponent } from '../../components/button/button.component';
 import { ModalHelpShelterComponent } from '../../components/modal-help-shelter/modal-help-shelter.component';
 
@@ -12,7 +13,10 @@ import { ModalHelpShelterComponent } from '../../components/modal-help-shelter/m
 export class AnimalProfileComponent {
   shelterModalVisible = false;
 
+  constructor(private _router: Router) {}
+
   recieveEvent($event: void) {
+    // this._router.navigate(['abrigo'])
     this.shelterModalVisible = true;
   }
 
