@@ -1,39 +1,12 @@
+<app-headerbar />
 <section>
   <div class="listagem-animais">
-
-    <div class="animal-anuncio">
+    <div *ngFor="let item of animalList$ | async" class="animal-anuncio">
       <img src="" alt="">
       <div class="descricao-anuncio">
-        <h2>Nome animal</h2>
-        <p class="nome-abrigo">Nome Abrigo</p>
-        <p>Bairro</p>
-      </div>
-    </div>
-
-    <div class="animal-anuncio">
-      <img src="" alt="">
-      <div class="descricao-anuncio">
-        <h2>Nome animal</h2>
-        <p class="nome-abrigo">Nome Abrigo</p>
-        <p>Bairro</p>
-      </div>
-    </div>
-
-    <div class="animal-anuncio">
-      <img src="" alt="">
-      <div class="descricao-anuncio">
-        <h2>Nome animal</h2>
-        <p class="nome-abrigo">Nome Abrigo</p>
-        <p>Bairro</p>
-      </div>
-    </div>
-
-    <div class="animal-anuncio">
-      <img src="" alt="">
-      <div class="descricao-anuncio">
-        <h2>Nome animal</h2>
-        <p class="nome-abrigo">Nome Abrigo</p>
-        <p>Bairro</p>
+        <h2>{{item.name}}</h2>
+        <p class="nome-abrigo">{{item.abrigo.name}}</p>
+        <p>{{item.abrigo.bairro}}</p>
       </div>
     </div>
 
