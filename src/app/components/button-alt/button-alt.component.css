@@ -1,0 +1,29 @@
+.getpet-button-alt {
+  color: white;
+  background-color: #b41dc1;
+  border: none;
+  border-radius: 12px;
+  padding: 8px;
+  width: 16em;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.getpet-button-alt:hover {
+  background-color: #681470;
+  cursor: pointer;
+}
+
+.getpet-button-alt-delete{
+  color: white;
+  background-color: #EB4848;
+  border: none;
+  border-radius: 12px;
+  padding: 8px;
+  width: 16em;
+}
+
+.getpet-button-alt-delete:hover{
+  background-color: #922d2d;
+  cursor: pointer;
+}

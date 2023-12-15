@@ -1,41 +1,14 @@
+<app-headerbar />
 <section>
   <div class="listagem-animais">
 
-    <div class="animal-anuncio">
+    <div class="animal-anuncio" *ngFor="let pet of pets">
       <img src="" alt="">
       <div class="descricao-anuncio">
-        <h2>Nome animal</h2>
-        <p class="nome-abrigo">Nome Abrigo</p>
-        <p>Bairro</p>
+        <h2>{{pet.name}}</h2>
+        <p class="nome-abrigo">{{pet.shelter.name}}</p>
+        <p>{{pet.shelter.location}}</p>
       </div>
     </div>
-
-    <div class="animal-anuncio">
-      <img src="" alt="">
-      <div class="descricao-anuncio">
-        <h2>Nome animal</h2>
-        <p class="nome-abrigo">Nome Abrigo</p>
-        <p>Bairro</p>
-      </div>
-    </div>
-
-    <div class="animal-anuncio">
-      <img src="" alt="">
-      <div class="descricao-anuncio">
-        <h2>Nome animal</h2>
-        <p class="nome-abrigo">Nome Abrigo</p>
-        <p>Bairro</p>
-      </div>
-    </div>
-
-    <div class="animal-anuncio">
-      <img src="" alt="">
-      <div class="descricao-anuncio">
-        <h2>Nome animal</h2>
-        <p class="nome-abrigo">Nome Abrigo</p>
-        <p>Bairro</p>
-      </div>
-    </div>
-
   </div>
 </section>
