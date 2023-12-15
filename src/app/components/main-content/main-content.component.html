@@ -9,8 +9,10 @@
       <div class="descricao-anuncio">
         <h2>Nome animal</h2>
         <p>Anunciado em</p>
-        <button class="botao-editar-anuncio">Editar anúncio de adoção</button>
-        <button class="botao-excluir-anuncio">Excluir anúncio de adoção</button>
+        <app-button [text]="'Editar anúncio de adoção'" (clickEvent)="recieveEditEvent()"/>
+        <!-- <button class="botao-editar-anuncio">Editar anúncio de adoção</button> -->
+        <app-button [text]="'Excluir anúncio de adoção'" (clickEvent)="recieveDeleteEvent()"/>
+        <!-- <button class="botao-excluir-anuncio">Excluir anúncio de adoção</button> -->
       </div>
     </div>
     <div class="animal-anuncio">
@@ -42,3 +44,4 @@
     </div>
   </div>
 </section>
+
