@@ -10,11 +10,12 @@ import { AnimalProfileComponent } from './screens/animal-profile/animal-profile.
 import { AbrigoScreenComponent } from './screens/abrigo-screen/abrigo-screen.component';
 import { CadastroScreenComponent } from './screens/cadastro-screen/cadastro-screen.component';
 import { LoginScreenComponent } from './screens/login-screen/login-screen.component';
+import { ResultsScreenComponent } from './screens/results-screen/results-screen.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderbarComponent, /* MainContentComponent, SidebarComponent, AnimalFormComponent,*/LoginScreenComponent, CadastroScreenComponent, AnimalProfileComponent,AbrigoScreenComponent, SearchscreenComponent],
+  imports: [CommonModule, RouterOutlet, HeaderbarComponent, /* MainContentComponent, SidebarComponent, AnimalFormComponent,*/ResultsScreenComponent, LoginScreenComponent, CadastroScreenComponent, AnimalProfileComponent,AbrigoScreenComponent, SearchscreenComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

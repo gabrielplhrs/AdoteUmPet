@@ -1,0 +1,43 @@
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listagem-animais{
+  display: flex;
+  justify-content: flex-start;
+  padding: 40px;
+  width: 70%;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.animal-anuncio img{
+  height: 12em;
+  width: 10em;
+  border: 4px;
+}
+
+.descricao-anuncio{
+  padding: 12px;
+}
+
+.animal-anuncio{
+  display: flex;
+  border: 1px solid #bdbdbd;
+  margin: 12px ;
+  width: 24em;
+  height: 12em;
+  border-radius: 4px;
+  box-shadow:  2px 2px rgb(121, 121, 121);
+}
+
+.animal-anuncio:hover{
+  border:1px solid #B41DC1;
+  cursor: pointer;
+}
+
+.nome-abrigo{
+  color: #B41DC1;
+}
