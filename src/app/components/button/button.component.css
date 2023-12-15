@@ -3,11 +3,11 @@
     border-radius: 100px;
     padding: 0 36px;
     min-width: 64px;
-    height: 36px;
+    width: 15em;
+    height: 4em;
     vertical-align: middle;
     text-align: center;
     text-overflow: ellipsis;
-    text-transform: uppercase;
     color: #fff;
     background-color: #B41DC1;
     font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
