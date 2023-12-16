@@ -5,10 +5,15 @@
             <h4>Seu melhor amigo está te esperando</h4>
         </div>
     </div>
-    <div>
+    <div *ngIf="user == undefined">
         <button class="button-login" (click)="navigateToLogin()">
             <img src="../../../assets/user.png" alt="icon profile">
             <h2>Fazer Login</h2>
+        </button>
+    </div>
+    <div *ngIf="user != undefined">
+        <button class="button-logged" (click)="navigateToLogin()">
+            <img src="../../../assets/uvv-brasao.png" alt="icon profile">
         </button>
     </div>
 </header>

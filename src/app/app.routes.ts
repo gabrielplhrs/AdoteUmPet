@@ -8,7 +8,7 @@ import { ResultsScreenComponent } from './screens/results-screen/results-screen.
 export const routes: Routes = [
     { path: 'buscar', component: SearchscreenComponent },
     { path: 'login', component: LoginScreenComponent },
-    { path: 'animal', component: AnimalProfileComponent },
+    { path: 'animal/:id', component: AnimalProfileComponent },
     { path: 'abrigo', component: AbrigoScreenComponent },
     { path: 'resultado', component: ResultsScreenComponent },
     { path: '', redirectTo: '/buscar', pathMatch: 'full' },

@@ -35,6 +35,22 @@ header {
     padding-right: 1em;
 }
 
+.button-logged {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: transparent;
+    border: none;
+    transition-duration: 0.4s;
+    margin-right: 10px;
+}
+
+.button-logged img {
+    height: 5em;
+    padding-right: 1em;
+}
+
 .titulo-completo {
     padding: 10px;
     padding-bottom: 15px;

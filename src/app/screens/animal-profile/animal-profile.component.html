@@ -3,8 +3,8 @@
   <div class="animal">
 
     <div class="div-animal-nome">
-      <h1>Nome</h1>
-      <h4>Disponivel para adoção desde</h4>
+      <h1>{{pet?.name}}</h1>
+      <h4>Disponivel para adoção desde {{pet?.formattedDate}}</h4>
     </div>
     <div class="div-imagens">
       <button class="button-principal">
@@ -24,7 +24,7 @@
     </div>
     <div class="div-descricao">
       <h1>Descrição</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam</p>
+      <p>{{pet?.description}}</p>
     </div>
 
 
@@ -32,22 +32,20 @@
   <div class="abrigo">
     <div class="abrigo-info">
       <div class="abrigo-info-nome">
-        <h2>Nome abrigo</h2>
+        <h2>{{pet?.shelter?.name}}</h2>
       </div>
       <div class="abrigo-info-endereco">
         <h2>Localização</h2>
-        <h4>Cidade</h4>
-        <h4>Bairro</h4>
+        <h4>{{pet?.shelter?.city}}</h4>
+        <h4>{{pet?.shelter?.neighborhood}}</h4>
       </div>
       <div class="abrigo-info-contato">
         <h2>Contato</h2>
-        <h4>petscontato.com.br</h4>
-        <h4>(27)99999-9999</h4>
+        <h4>{{pet?.shelter?.email}}</h4>
+        <h4>{{pet?.shelter?.phone}}</h4>
       </div>
 
       <app-button [text]="'Página do Abrigo'" (clickEvent)="recieveEvent($event)"/>
     </div>
   </div>
 </div>
-
-<app-modal-help-shelter [visible]="shelterModalVisible" (notifyParent)="triggerModalClosure()" />

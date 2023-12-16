@@ -1,22 +1,34 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ButtonComponent } from '../../components/button/button.component';
 import { ModalHelpShelterComponent } from '../../components/modal-help-shelter/modal-help-shelter.component';
-
+import { HeaderbarComponent } from '../../components/headerbar/headerbar.component';
+import { Pet, PetService } from '../../service/pet.service';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-animal-profile',
   standalone: true,
-  imports: [ButtonComponent, ModalHelpShelterComponent],
+  imports: [ButtonComponent, HeaderbarComponent],
   templateUrl: './animal-profile.component.html',
-  styleUrl: './animal-profile.component.css'
+  styleUrl: './animal-profile.component.css',
 })
-export class AnimalProfileComponent {
+export class AnimalProfileComponent implements OnInit {
   shelterModalVisible = false;
+  pet: Pet | undefined;
 
-  recieveEvent($event: void) {
-    this.shelterModalVisible = true;
+  constructor(
+    private petService: PetService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
+
+  ngOnInit(): void {
+    this.route.params.subscribe((params) => {
+      const id = params['id'];
+      this.pet = this.petService.getPetById(id);
+    });
   }
 
-  triggerModalClosure($event: void) {
-    this.shelterModalVisible = false;
+  recieveEvent($event: void) {
+    this.router.navigate(['/abrigo'])
   }
 }

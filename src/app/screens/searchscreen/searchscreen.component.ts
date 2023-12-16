@@ -10,6 +10,4 @@ import { HeaderbarComponent } from '../../components/headerbar/headerbar.compone
   templateUrl: './searchscreen.component.html',
   styleUrl: './searchscreen.component.css'
 })
-export class SearchscreenComponent {
-  
-}
+export class SearchscreenComponent {}

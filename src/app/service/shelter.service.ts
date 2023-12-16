@@ -21,12 +21,18 @@ export class ShelterService {
       {
         id: 0,
         name: 'Patinhas Carentes',
-        location: 'Vitória',
+        city: 'Vitória',
+        neighborhood: 'Jardim da Penha',
+        email: 'patinhas@carentes.com',
+        phone: '(27) 99999-8888',
       },
       {
         id: 1,
         name: 'Pet Care',
-        location: 'Venda Nova do Imigrante',
+        city: 'Venda Nova do Imigrante',
+        neighborhood: 'Sei la',
+        email: 'pet@care.com',
+        phone: '(27) 99999-8888',
       },
     ];
   }
@@ -37,12 +43,18 @@ export class ShelterService {
         {
           id: 0,
           name: 'Patinhas Carentes',
-          location: 'Vitória',
+          city: 'Vitória',
+          neighborhood: 'Jardim da Penha',
+          email: 'patinhas@carentes.com',
+          phone: '(27) 99999-8888',
         },
         {
           id: 1,
           name: 'Pet Care',
-          location: 'Venda Nova do Imigrante',
+          city: 'Venda Nova do Imigrante',
+          neighborhood: 'Sei la',
+          email: 'pet@care.com',
+          phone: '(27) 99999-8888',
         },
     ];
 
@@ -53,5 +65,8 @@ export class ShelterService {
 export interface Shelter {
   id: number;
   name: string;
-  location: string;
+  city: string;
+  neighborhood: string;
+  email: string;
+  phone: string;
 }
