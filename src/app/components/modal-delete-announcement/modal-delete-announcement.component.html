@@ -1,5 +1,14 @@
 <app-modal [visible]="visible">
-    <h1>Remover</h1>
+    <div>
+        <h1>Aviso</h1>
+        <div class="row">
+            <img src="../../../assets/warning.svg" alt="delete icon">
+            <p>Você deseja excluir xx dos animais cadastrados para doação?</p>
+        </div>
+    </div>
 
-    <app-button [text]="'Fechar'" (clickEvent)="recieveEvent()"/>
+    <div class="row">
+        <app-button-alt [text]="'Cancelar'" (clickEvent)="recieveEvent()" [className]="'getpet-button-alt-secondary'"/>
+        <app-button-alt [text]="'Excluir'" (clickEvent)="recieveDeleteEvent()" [className]="'getpet-button-alt-delete'"/>
+    </div>
 </app-modal>

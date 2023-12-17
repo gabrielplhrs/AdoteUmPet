@@ -94,6 +94,10 @@ export class PetService {
   getPetById(id: number): Pet | undefined {
     return this.database.find(pet => pet.id == id);
   }
+
+  deleteAnnouncement(id: number) {
+    this.database = this.database.filter(pet => pet.id != id)
+  }
 }
 
 export interface Pet {

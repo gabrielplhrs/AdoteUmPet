@@ -1,0 +1,50 @@
+app-modal input {
+  margin: 8px 0;
+  padding-right: 40px; /* Adjust the padding to leave space for the icon on the right */
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  display: inline-block;
+  width: 36em;
+}
+
+app-modal::-ms-input-placeholder {
+  color: #8e8e8e;
+  font-size: 14px;
+}
+
+app-modal label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 8px 0;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #8e8e8e;
+  font-size: 14px;
+}
+
+.upload-label {
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #008cba;
+  border-radius: 15px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
