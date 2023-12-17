@@ -1,3 +1,4 @@
+<app-headerbar />
 <section>
   <div class="login-box">
     <div class="header-login">
@@ -5,13 +6,20 @@
       <h1>Fazer Login</h1>
     </div>
     <div class="form-login">
-      <input required placeholder="E-mail" type="text" [(ngModel)]="email">
-      <input required placeholder="Senha" type="password" [(ngModel)]="password">
+      <input required placeholder="E-mail" type="text" [(ngModel)]="email" />
+      <input
+        required
+        placeholder="Senha"
+        type="password"
+        [(ngModel)]="password"
+      />
     </div>
     <div class="botoes-login">
       <div>
         <h5>Não tem uma conta?</h5>
-        <button class="botao-criar-conta">Criar Conta</button>
+        <button class="botao-criar-conta" (click)="goToRegister()">
+          Criar Conta
+        </button>
       </div>
       <button class="botao-entrar" (click)="handleLogin()">Entrar</button>
     </div>

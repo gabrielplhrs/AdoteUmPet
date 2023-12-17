@@ -1,7 +1,7 @@
 <section>
   <div class="header-anuncios">
     <h1>Pets para adoção</h1>
-    <button class="botao-criar-anuncio">Criar anuncio de adoção</button>
+    <button class="botao-criar-anuncio" (click)="createAnnouncement()">Criar anuncio de adoção</button>
   </div>
   <div class="anuncios-abrigo">
     <div class="animal-anuncio" *ngFor="let pet of pets">

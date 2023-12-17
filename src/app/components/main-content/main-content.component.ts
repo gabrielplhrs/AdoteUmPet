@@ -2,6 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { ButtonAltComponent } from '../button-alt/button-alt.component';
 import { Pet, PetService } from '../../service/pet.service';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class MainContentComponent {
 
   pets: Pet[];
 
-  constructor(private petService: PetService) {
+  constructor(private petService: PetService, private router: Router) {
     this.pets = petService.getPets();
   }
 
@@ -27,5 +28,9 @@ export class MainContentComponent {
 
   recieveDeleteEvent() {
     this.notifyParentDelete.emit();
+  }
+
+  createAnnouncement() {
+    this.router.navigate(['animal-cadastro']);
   }
 }
