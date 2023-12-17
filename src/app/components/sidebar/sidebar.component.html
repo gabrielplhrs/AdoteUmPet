@@ -1,15 +1,23 @@
 <div class="sidebar">
   <div class="profile-side-bar">
-    <img class="abrigo-logo" src="../../assets/uvv-brasao.png" alt="Teste">
+    <img class="abrigo-logo" src="../../assets/uvv-brasao.png" alt="Teste" />
     <div class="contato">
-    <h1 class="abrigo-nome">Nome genérico</h1>
-    <h3 class="abrigo-email">emailemail.com</h3>
-    <h3 class="abrigo-telefone">(27)88888-8888</h3>
+      <h1 class="abrigo-nome">Nome genérico</h1>
+      <h3 class="abrigo-email">emailemail.com</h3>
+      <h3 class="abrigo-telefone">(27)88888-8888</h3>
     </div>
   </div>
   <div class="abrigo-buttons">
-    <button>Editar dados</button>
-    <app-button [text]="'Apoiar abrigo'" (clickEvent)="recieveEvent($event)"/>
+    <app-button
+      [text]="'Editar dados'"
+      (clickEvent)="recieveEventEditShelter($event)"
+    />
+    <app-button [text]="'Apoiar abrigo'" (clickEvent)="recieveEvent($event)" />
   </div>
 </div>
-<app-modal-help-shelter [visible]="shelterModalVisible" (notifyParent)="triggerModalClosure()" />
+<app-modal-edit-announcement [visible]="shelterEditModalVisible" />
+<app-modal-help-shelter
+  [visible]="shelterModalVisible"
+  
+  (notifyParent)="triggerShelterModalClosure()"
+/>

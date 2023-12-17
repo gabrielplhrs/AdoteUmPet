@@ -3,5 +3,4 @@
   <app-sidebar></app-sidebar>
   <app-main-content (notifyParentEdit)="recieveEditEvent()" (notifyParentDelete)="recieveDeleteEvent()"></app-main-content>
 </section>
-<app-modal-edit-announcement [visible]="editModalVisible" (notifyEditClosure)="triggerEditModalClosure()" />
 <app-modal-delete-announcement [visible]="deleteModalVisible" (notifyDeleteClosure)="triggerDeleteModalClosure()" />

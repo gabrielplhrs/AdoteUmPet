@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 import { MainContentComponent } from '../../components/main-content/main-content.component';
-import { ModalEditAnnouncementComponent } from '../../components/modal-edit-announcement/modal-edit-announcement.component';
 import { ModalDeleteAnnouncementComponent } from '../../components/modal-delete-announcement/modal-delete-announcement.component';
 import { HeaderbarComponent } from '../../components/headerbar/headerbar.component';
 
@@ -11,7 +10,6 @@ import { HeaderbarComponent } from '../../components/headerbar/headerbar.compone
   imports: [
     SidebarComponent,
     MainContentComponent,
-    ModalEditAnnouncementComponent,
     ModalDeleteAnnouncementComponent,
     HeaderbarComponent,
   ],
