@@ -61,4 +61,10 @@ export class MainContentComponent implements OnInit {
       });
     });
   }
+
+  deleteAnimal(id: number){
+      this.service.deleteAnimal(id).subscribe(res=>{
+        location.reload()
+      });
+  }
 }

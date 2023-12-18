@@ -10,7 +10,7 @@
         <h2>{{animal.name}}</h2>
         <p>Anunciado em:</p>
         <app-button-alt [text]="'Editar anúncio de adoção'" (clickEvent)="recieveEditEvent()"/>
-        <app-button-alt [text]="'Excluir anúncio de adoção'" [className]="'getpet-button-alt-delete'" (clickEvent)="recieveDeleteEvent()"/>
+        <app-button-alt [text]="'Excluir anúncio de adoção'" [className]="'getpet-button-alt-delete'" (clickEvent)="deleteAnimal(animal.id)"/>
       </div>
     </div>
   </div>
