@@ -22,13 +22,15 @@ export class AbrigoScreenComponent implements OnInit{
   editModalVisible = false;
   deleteModalVisible = false;
   abrigo: any=[];
+  deleteId = 0;
 
   recieveEditEvent($event: void) {
     this.editModalVisible = true;
   }
 
-  recieveDeleteEvent($event: void) {
+  recieveDeleteEvent(id: number) {
     this.deleteModalVisible = true;
+    this.deleteId = id;
   }
 
   triggerEditModalClosure($event: void) {

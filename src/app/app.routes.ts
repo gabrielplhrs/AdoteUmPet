@@ -14,6 +14,6 @@ export const routes: Routes = [
     { path: 'animal/:id', component: AnimalProfileComponent },
     { path: 'abrigo/:id', component: AbrigoScreenComponent },
     { path: 'resultado', component: ResultsScreenComponent },
-    { path: 'animal-cadastro', component: AnimalCreateScreenComponent },
+    { path: 'animal-cadastro/:id', component: AnimalCreateScreenComponent },
     { path: '', redirectTo: '/buscar', pathMatch: 'full' },
 ];

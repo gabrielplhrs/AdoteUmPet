@@ -69,5 +69,5 @@ export interface Abrigo {
   bairro: string;
   email: string;
   telefone: string;
-  descricao: string;
+  description: string;
 }

@@ -1,6 +1,6 @@
 <app-headerbar />
 <section class="titulo-searchbox-section">
   <app-sidebar></app-sidebar>
-  <app-main-content (notifyParentEdit)="recieveEditEvent()" (notifyParentDelete)="recieveDeleteEvent()"></app-main-content>
+  <app-main-content (notifyParentEdit)="recieveEditEvent()" (notifyParentDelete)="recieveDeleteEvent(deleteId)"></app-main-content>
 </section>
-<app-modal-delete-announcement [visible]="deleteModalVisible" (notifyDeleteClosure)="triggerDeleteModalClosure()" />
+<app-modal-delete-announcement [visible]="deleteModalVisible" [deleteId]="deleteId" (notifyDeleteClosure)="triggerDeleteModalClosure()" />

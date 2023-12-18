@@ -3,28 +3,31 @@
 
     <h3>Nome</h3>
     <input required placeholder="Digite seu nome" type="Digite seu nome" [(ngModel)]="name">
-    
+
     <h3>Logo</h3>
     <label for="upload">
         <p>Insira uma logo</p>
         <input type="file" id="upload" style="display:none">
         <img src="../../../assets/attachment.svg" alt="delete icon">
     </label>
-    
+
     <h3>E-mail</h3>
     <input required placeholder="Digite seu e-mail" type="text" [(ngModel)]="email">
-    
+
     <h3>Telefone</h3>
-    <input required placeholder="Digite seu telefone" type="text" [(ngModel)]="phone">
-    
-    <h3>Endereço</h3>
-    <input required placeholder="Digite seu endereço" type="text" [(ngModel)]="address">
-    
+    <input required placeholder="Digite seu telefone" type="text" [(ngModel)]="telefone">
+
+    <h3>Cidade</h3>
+    <input required placeholder="Digite seu endereço" type="text" [(ngModel)]="cidade">
+
+    <h3>Bairro</h3>
+    <input required placeholder="Digite seu endereço" type="text" [(ngModel)]="bairro">
+
     <h3>Informações para apoio financeiro</h3>
-    <input required placeholder="Digite seus dados bancários" type="text" [(ngModel)]="email">
+    <input required placeholder="Digite seus dados bancários" type="text" [(ngModel)]="description">
 
     <div class="row">
         <app-button-alt [text]="'Cancelar'" (clickEvent)="recieveEvent()" [className]="'getpet-button-alt-secondary'"/>
-        <app-button-alt [text]="'Salvar'" (clickEvent)="recieveSaveEvent()" [className]="'getpet-button-alt'"/>
+        <app-button-alt [text]="'Salvar'" (clickEvent)="updateAbrigo()" [className]="'getpet-button-alt'"/>
     </div>
 </app-modal>

@@ -18,7 +18,7 @@ export class MainContentComponent implements OnInit {
   @Output() notifyParentDelete = new EventEmitter<void>();
 
   animaisList$: Animal[] | undefined;
-  animaisAbrigoList: Animal[] | undefined;;
+  animaisAbrigoList: Animal[] | undefined;
 
   animaisAbrigoMap:Map<number, string> = new Map();
 
@@ -31,7 +31,12 @@ export class MainContentComponent implements OnInit {
   }
 
   createAnnouncement() {
-    this.router.navigate(['animal-cadastro']);
+    this.route.params.subscribe((params) => {
+    let id = Number(params['id']);
+    var url = ('animal-cadastro/' + id)
+    this.router.navigate([url]);
+  });
+
   }
 
   getAnimalByAbrigo(abrigoId: number) {

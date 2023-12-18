@@ -41,7 +41,6 @@ export class SidebarComponent implements OnInit{
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       let id = params['id'];
-      console.log(id)
 
       this.service.getAbrigo(id).subscribe((abrigo: Abrigo) => {
         this.abrigo$ = abrigo;

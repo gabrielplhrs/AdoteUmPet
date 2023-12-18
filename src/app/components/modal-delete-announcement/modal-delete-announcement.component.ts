@@ -1,7 +1,8 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ModalComponent } from '../modal/modal.component';
 import { ButtonAltComponent } from '../button-alt/button-alt.component';
-import { PetService } from '../../service/pet.service';
+import { Animal, PetService } from '../../service/pet.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-modal-delete-announcement',
@@ -10,14 +11,19 @@ import { PetService } from '../../service/pet.service';
   templateUrl: './modal-delete-announcement.component.html',
   styleUrl: './modal-delete-announcement.component.css'
 })
-export class ModalDeleteAnnouncementComponent {
+export class ModalDeleteAnnouncementComponent implements OnInit{
+  animal$!: Animal;
 
   @Input('visible') visible = false;
-  @Input('petId') petId: number | undefined = undefined;
+  @Input('deleteId') deleteId = 0;
 
   @Output() notifyDeleteClosure = new EventEmitter<void>();
 
-  constructor(private petService: PetService) {}
+  constructor(
+    private service: PetService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   recieveEvent() {
     this.visible = !this.visible;
@@ -25,9 +31,13 @@ export class ModalDeleteAnnouncementComponent {
   }
 
   recieveDeleteEvent() {
-    if (this.petId != undefined)
-      this.petService.deleteAnimal(this.petId);
+    if (this.deleteId != undefined)
+      this.service.deleteAnimal(this.deleteId);
     this.recieveEvent();
+  }
+
+  ngOnInit(): void {
+
 
   }
 }
