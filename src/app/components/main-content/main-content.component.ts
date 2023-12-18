@@ -1,8 +1,9 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ButtonAltComponent } from '../button-alt/button-alt.component';
-import { Pet, PetService } from '../../service/pet.service';
+import { PetService, Animal } from '../../service/pet.service';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Observable, map } from 'rxjs';
 
 
 @Component({
@@ -12,15 +13,14 @@ import { Router } from '@angular/router';
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.css'
 })
-export class MainContentComponent {
+export class MainContentComponent implements OnInit {
   @Output() notifyParentEdit = new EventEmitter<void>();
   @Output() notifyParentDelete = new EventEmitter<void>();
 
-  pets: Pet[];
+  animaisList$: Animal[] | undefined;
+  animaisAbrigoList: Animal[] | undefined;;
 
-  constructor(private petService: PetService, private router: Router) {
-    this.pets = petService.getPets();
-  }
+  animaisAbrigoMap:Map<number, string> = new Map();
 
   recieveEditEvent() {
     this.notifyParentEdit.emit();
@@ -32,5 +32,28 @@ export class MainContentComponent {
 
   createAnnouncement() {
     this.router.navigate(['animal-cadastro']);
+  }
+
+  getAnimalByAbrigo(abrigoId: number) {
+    if (this.animaisList$ == undefined) return;
+
+    return this.animaisList$.filter(animal => animal.abrigoId === abrigoId);
+  }
+
+  constructor(
+    private service: PetService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
+
+  ngOnInit(): void {
+    this.route.params.subscribe((params) => {
+      let id = Number(params['id']);
+
+      this.service.getAnimalList().subscribe((animais: Animal[]) => {
+        this.animaisList$ = animais;
+        this.animaisAbrigoList = this.getAnimalByAbrigo(id);
+      });
+    });
   }
 }

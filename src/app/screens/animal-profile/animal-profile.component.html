@@ -1,30 +1,30 @@
-<app-headerbar />
+<app-headerbar></app-headerbar>
 <div class="principal">
-  <div class="animal">
+  <div *ngFor="let pet of pets" class="animal">
 
     <div class="div-animal-nome">
-      <h1>{{pet?.name}}</h1>
-      <h4>Disponivel para adoção desde {{pet?.formattedDate}}</h4>
+      <h1>{{pet.name}}</h1>
+      <h4>Disponivel para adoção desde</h4>
     </div>
     <div class="div-imagens">
       <button class="button-principal">
-        <img src="" alt="">
+        <img src="../../../assets/cachorro-teste.png" alt="">
       </button>
       <div class="div-imagens-secundarias-animal">
         <button class="button-secundario">
-          <img src="" alt="">
+          <img src="../../../assets/cachorro-teste.png" alt="">
         </button>
         <button class="button-secundario">
-          <img src="" alt="">
+          <img src="../../../assets/cachorro-teste.png" alt="">
         </button>
         <button class="button-secundario">
-          <img src="" alt="">
+          <img src="../../../assets/cachorro-teste.png" alt="">
         </button>
       </div>
     </div>
     <div class="div-descricao">
       <h1>Descrição</h1>
-      <p>{{pet?.description}}</p>
+      <p></p>
     </div>
 
 
@@ -32,20 +32,20 @@
   <div class="abrigo">
     <div class="abrigo-info">
       <div class="abrigo-info-nome">
-        <h2>{{pet?.shelter?.name}}</h2>
+        <h2>Nome abrigo</h2>
       </div>
       <div class="abrigo-info-endereco">
         <h2>Localização</h2>
-        <h4>{{pet?.shelter?.city}}</h4>
-        <h4>{{pet?.shelter?.neighborhood}}</h4>
+        <h4>Cidade</h4>
+        <h4>Bairro</h4>
       </div>
       <div class="abrigo-info-contato">
         <h2>Contato</h2>
-        <h4>{{pet?.shelter?.email}}</h4>
-        <h4>{{pet?.shelter?.phone}}</h4>
+        <h4>telefone</h4>
+        <h4>e-mail</h4>
       </div>
 
-      <app-button [text]="'Página do Abrigo'" (clickEvent)="recieveEvent($event)"/>
+      <app-button [text]="'Página do Abrigo'" (clickEvent)="recieveEvent(pet.abrigoId)"/>
     </div>
   </div>
 </div>

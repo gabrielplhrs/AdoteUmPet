@@ -7,10 +7,11 @@
     </div>
     <div class="two-columns">
       <div class="form-login">
-        <input required placeholder="Nome do Abrigo" type="text" />
-        <input required placeholder="E-mail" type="text" />
-        <input required placeholder="Número de Telefone" type="text" />
-        <input required placeholder="Localização" type="text" />
+        <input [(ngModel)]="name" required placeholder="Nome do Abrigo" type="text" />
+        <input [(ngModel)]="email" required placeholder="E-mail" type="text" />
+        <input [(ngModel)]="telefone" required placeholder="Número de Telefone" type="text" />
+        <input [(ngModel)]="cidade" required placeholder="Cidade" type="text" />
+        <input [(ngModel)]="bairro" required placeholder="Bairro" type="text" />
         <div class="gap">
           <input required placeholder="Senha" [type]="checkboxSelected ? 'text' : 'password'" />
           <input required placeholder="Confirmar a Senha" [type]="checkboxSelected ? 'text' : 'password'" />
@@ -45,7 +46,7 @@
           Faça login em vez disso
         </button>
       </div>
-      <button class="botao-entrar">Criar Conta</button>
+      <button (click)="addAbrigo()" class="botao-entrar">Criar Conta</button>
     </div>
   </div>
 </section>

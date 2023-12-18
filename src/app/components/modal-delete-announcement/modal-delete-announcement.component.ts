@@ -11,6 +11,7 @@ import { PetService } from '../../service/pet.service';
   styleUrl: './modal-delete-announcement.component.css'
 })
 export class ModalDeleteAnnouncementComponent {
+
   @Input('visible') visible = false;
   @Input('petId') petId: number | undefined = undefined;
 
@@ -25,7 +26,8 @@ export class ModalDeleteAnnouncementComponent {
 
   recieveDeleteEvent() {
     if (this.petId != undefined)
-      this.petService.deleteAnnouncement(this.petId);
+      this.petService.deleteAnimal(this.petId);
     this.recieveEvent();
+
   }
 }

@@ -1,12 +1,6 @@
 <app-modal [visible]="visible">
     <h1>Apoie o abrigo</h1>
-    <p>{{bankName}}</p>
-    <p>{{name}}</p>
-    <p>CNPJ: {{cnpj}}</p>
-    <p>Agência: {{agency}}</p>
-    <p>Conta corrente: {{account}}</p>
-    <p>Pix: {{pix}}</p>
-    <p>Picpay: &#64;{{picpay}}</p>
+    <p>{{description}}</p>
 
     <app-button [text]="'Fechar'" (clickEvent)="recieveEvent()"/>
 </app-modal>

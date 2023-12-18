@@ -4,11 +4,11 @@
     <button class="botao-criar-anuncio" (click)="createAnnouncement()">Criar anuncio de adoção</button>
   </div>
   <div class="anuncios-abrigo">
-    <div class="animal-anuncio" *ngFor="let pet of pets">
+    <div class="animal-anuncio" *ngFor="let animal of animaisAbrigoList">
       <img src="" alt="">
       <div class="descricao-anuncio">
-        <h2>{{pet.name}}</h2>
-        <p>Anunciado em: {{pet.formattedDate}}</p>
+        <h2>{{animal.name}}</h2>
+        <p>Anunciado em:</p>
         <app-button-alt [text]="'Editar anúncio de adoção'" (clickEvent)="recieveEditEvent()"/>
         <app-button-alt [text]="'Excluir anúncio de adoção'" [className]="'getpet-button-alt-delete'" (clickEvent)="recieveDeleteEvent()"/>
       </div>

@@ -11,18 +11,11 @@ import { ButtonComponent } from '../button/button.component';
 })
 export class ModalHelpShelterComponent {
   @Input('visible') visible = false;
-
-  @Input('bankName') bankName = '';
-  @Input('name') name = '';
-  @Input('cnpj') cnpj = '';
-  @Input('agency') agency = '';
-  @Input('account') account = '';
-  @Input('pix') pix = '';
-  @Input('picpay') picpay = '';
+  @Input('description') description = '';
 
   @Output() notifyParent = new EventEmitter<void>();
 
-  recieveEvent() {    
+  recieveEvent() {
     this.visible = !this.visible;
     this.notifyParent.emit();
   }

@@ -2,12 +2,12 @@
 <section>
   <div class="listagem-animais">
 
-    <div class="animal-anuncio" *ngFor="let pet of pets" (click)="animalCardClick(pet.id)">
+    <div class="animal-anuncio"  *ngFor="let animal of animaisList$ | async" (click)="animalCardClick(animal.id)">
       <img src="" alt="">
       <div class="descricao-anuncio">
-        <h2>{{pet.name}}</h2>
-        <p class="nome-abrigo">{{pet.shelter.name}}</p>
-        <p>{{pet.shelter.city}}</p>
+        <h2>{{animal.name}}</h2>
+          <p class="nome-abrigo">{{nomeAbrigosMap.get(animal.abrigoId)}}</p>
+          <p>{{bairroAbrigosMap.get(animal.abrigoId)}}</p>
       </div>
     </div>
   </div>

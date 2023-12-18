@@ -12,7 +12,7 @@ export const routes: Routes = [
     { path: 'login', component: LoginScreenComponent },
     { path: 'registrar', component: RegisterScreenComponent },
     { path: 'animal/:id', component: AnimalProfileComponent },
-    { path: 'abrigo', component: AbrigoScreenComponent },
+    { path: 'abrigo/:id', component: AbrigoScreenComponent },
     { path: 'resultado', component: ResultsScreenComponent },
     { path: 'animal-cadastro', component: AnimalCreateScreenComponent },
     { path: '', redirectTo: '/buscar', pathMatch: 'full' },

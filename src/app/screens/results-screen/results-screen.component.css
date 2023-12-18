@@ -8,7 +8,7 @@ section{
   display: flex;
   justify-content: flex-start;
   padding: 40px;
-  width: 70%;
+  width: 75%;
   flex-wrap: wrap;
   flex-direction: row;
 }
