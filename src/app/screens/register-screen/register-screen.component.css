@@ -9,7 +9,7 @@ section {
   border: 1px solid #b41dc1;
   padding: 40px;
   border-radius: 12px;
-  margin-top: 12%;
+  margin-top: 6%;
 }
 
 .header-login {
@@ -104,9 +104,9 @@ section {
 }
 
 input[type=checkbox] {
-  vertical-align: middle; 
-  position: relative; 
-  bottom: 1px; 
+  vertical-align: middle;
+  position: relative;
+  bottom: 1px;
 }
 
 label {

@@ -62,6 +62,10 @@ export interface Animal {
   abrigo: Abrigo;
 }
 
+export interface ImageAnimal extends Animal {
+  image: string;
+}
+
 export interface Abrigo {
   id: number;
   name: string;
@@ -70,4 +74,8 @@ export interface Abrigo {
   email: string;
   telefone: string;
   description: string;
+}
+
+export interface ImageAbrigo extends Abrigo {
+  image: string;
 }

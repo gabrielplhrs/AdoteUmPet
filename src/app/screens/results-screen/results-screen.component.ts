@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { HeaderbarComponent } from '../../components/headerbar/headerbar.component';
-import { PetService } from '../../service/pet.service';
+import { ImageAnimal, PetService } from '../../service/pet.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -14,7 +14,7 @@ import { Observable } from 'rxjs';
 })
 export class ResultsScreenComponent implements OnInit{
 
-  animaisList$!: Observable<any[]>;
+  animaisList$!: ImageAnimal[];
   abrigosList$!: Observable<any[]>;
   abrigosNomesList: any=[];
   abrigosBairrosList: any=[];
@@ -25,8 +25,14 @@ export class ResultsScreenComponent implements OnInit{
   constructor(private service: PetService, private router: Router) {}
 
   ngOnInit(): void {
-    this.animaisList$ = this.service.getAnimalList();
-    this.abrigosList$ = this.service.getAbrigoList()
+    this.service.getAnimalList().subscribe(data => {
+      data.forEach((animal: ImageAnimal) => {
+        animal.image = `../../../assets/${animal.id}.png`
+      })
+
+      this.animaisList$ = data;
+    })
+    this.abrigosList$ = this.service.getAbrigoList();
     this.refreshNomeAbrigosMap();
     this.refreshBairrosAbrigos();
   }
@@ -50,7 +56,6 @@ export class ResultsScreenComponent implements OnInit{
       }
       console.log(this.abrigosBairrosList)
     })
-
   }
 
   animalCardClick(id: number) {

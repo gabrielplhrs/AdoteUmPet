@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ButtonComponent } from '../../components/button/button.component';
 import { ModalHelpShelterComponent } from '../../components/modal-help-shelter/modal-help-shelter.component';
 import { ModalEditAnnouncementComponent } from '../../components/modal-edit-announcement/modal-edit-announcement.component';
-import { Abrigo, PetService } from '../../service/pet.service';
+import { Abrigo, ImageAbrigo, PetService } from '../../service/pet.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent implements OnInit{
-  abrigo$!: Abrigo;
+  abrigo$!: ImageAbrigo;
 
   shelterModalVisible = false;
   shelterEditModalVisible = false;
@@ -42,8 +42,9 @@ export class SidebarComponent implements OnInit{
     this.route.params.subscribe((params) => {
       let id = params['id'];
 
-      this.service.getAbrigo(id).subscribe((abrigo: Abrigo) => {
+      this.service.getAbrigo(id).subscribe((abrigo: ImageAbrigo) => {
         this.abrigo$ = abrigo;
+        this.abrigo$.image = `../../../assets/${abrigo.id}-abrigo.png`
       })
     });
   }

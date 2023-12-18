@@ -2,3 +2,8 @@ app-button {
     align-self: flex-end;
     margin-top: 10px;
 }
+
+p{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

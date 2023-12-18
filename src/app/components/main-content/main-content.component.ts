@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ButtonAltComponent } from '../button-alt/button-alt.component';
-import { PetService, Animal } from '../../service/pet.service';
+import { PetService, Animal, ImageAnimal } from '../../service/pet.service';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, map } from 'rxjs';
@@ -17,8 +17,8 @@ export class MainContentComponent implements OnInit {
   @Output() notifyParentEdit = new EventEmitter<void>();
   @Output() notifyParentDelete = new EventEmitter<void>();
 
-  animaisList$: Animal[] | undefined;
-  animaisAbrigoList: Animal[] | undefined;
+  animaisList$: ImageAnimal[] | undefined;
+  animaisAbrigoList: ImageAnimal[] | undefined;
 
   animaisAbrigoMap:Map<number, string> = new Map();
 
@@ -55,16 +55,21 @@ export class MainContentComponent implements OnInit {
     this.route.params.subscribe((params) => {
       let id = Number(params['id']);
 
-      this.service.getAnimalList().subscribe((animais: Animal[]) => {
+      this.service.getAnimalList().subscribe((animais: ImageAnimal[]) => {
         this.animaisList$ = animais;
         this.animaisAbrigoList = this.getAnimalByAbrigo(id);
+        this.animaisAbrigoList?.forEach(animal => {
+          animal.image = `../../../assets/${animal.id}.png`
+        })
       });
     });
   }
 
   deleteAnimal(id: number){
-      this.service.deleteAnimal(id).subscribe(res=>{
-        location.reload()
-      });
+    this.service.deleteAnimal(id).subscribe(res=>{
+      location.reload()
+    });
   }
 }
+
+
